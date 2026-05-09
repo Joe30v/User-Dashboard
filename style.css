@@ -237,6 +237,7 @@ header h1 {
         border-radius: 3px;
         flex-shrink: 0;
         opacity: 0;
+        width: 100%;
         pointer-events: none;
     }
     
