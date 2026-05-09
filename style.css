@@ -309,8 +309,8 @@ header h1 {
 
 @media (max-width: 600px) {
     .dashboard-container .search-icon{
-        right: 5px;
-        top: 5px;
+        right: 25px;
+        top: 25px;
     }
     #searchInput{
         padding-right: 56px;
