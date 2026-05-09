@@ -178,8 +178,21 @@ header h1 {
         text-align: center;
     }
 
+    /* reduce top-nav padding on small screens so items align on one row */
+    .top-nav{
+        padding: 12px 16px;
+    }
+
+    /* smaller header and input on mobile */
+    header h1{ font-size: 20px; }
+
+    /* keep search container vertically centered within the smaller nav */
+    .search-container{ right: 12px; top: 50%; transform: translateY(-50%); }
+
     #searchInput{
-        margin-top: 15px;
+        margin-top: 0;
+        width: 140px;
+        padding: 8px 44px 8px 10px;
     }
 
     .user-grid{
