@@ -36,6 +36,7 @@ body {
     padding: 20px 40px;
     background-color: #f9f9f9;
     border-bottom: 2px solid #000000;
+    position: relative; /* positioning context for the search icon */
 }
 
 header {
@@ -54,7 +55,7 @@ header h1 {
 #searchInput{
     width: 100%;
     max-width: 300px;
-    padding: 12px 20px 12px 45px;
+    padding: 12px 45px 12px 16px; /* reserve right padding for right-anchored icon */
     border: 1px solid #ccc;
     border-radius: 6px;
     font-size: 16px;
@@ -83,12 +84,15 @@ header h1 {
 }
 
 .search-icon {
-    position: relative;
+    position: absolute; /* anchor relative to .top-nav */
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
     font-size: 24px;
     pointer-events: auto;
     color: #5a5a5a;
     cursor: pointer;
-    z-index: 10;
+    z-index: 50;
     transition: color 0.2s ease;
 }
 
@@ -192,12 +196,11 @@ header h1 {
         font-size: 16px;
     }
 
-    /* Ensure search icon is positioned correctly */
+    /* Ensure search icon is positioned correctly on small screens */
     .search-icon{
-        position: absolute;
-        right: 30px;
+        right: 16px;
         top: 12px;
-        z-index: 20;
+        transform: none;
     }
 
     .user-grid{
