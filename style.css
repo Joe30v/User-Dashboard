@@ -36,6 +36,7 @@ body {
     padding: 20px 40px;
     background-color: #f9f9f9;
     border-bottom: 2px solid #000000;
+    position: relative; /* positioning context for search container */
 }
 
 header {
@@ -75,7 +76,11 @@ header h1 {
 }
 
 .search-container {
-    position: relative;
+    /* Anchor search container to top-right of the nav and center vertically */
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
     display: flex;
     align-items: center;
     gap: 10px;
@@ -292,9 +297,10 @@ header h1 {
 }
 
 .dashboard-container .search-icon {
-    position: absolute;
-    right: 20px;
-    top: -10px;
+    /* let the icon flow inside the search container (not absolutely positioned) */
+    position: static;
+    right: auto;
+    top: auto;
     font-size: 24px;
     z-index: 2000;
     display: block !important;
@@ -309,8 +315,7 @@ header h1 {
 
 @media (max-width: 600px) {
     .dashboard-container .search-icon{
-        right: 25px;
-        top: 20px;
+        position: static;
     }
     #searchInput{
         padding-right: 56px;
