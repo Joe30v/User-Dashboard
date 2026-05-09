@@ -243,8 +243,8 @@ header h1 {
     /* Show input when focused or when not hidden */
     #searchInput:focus,
     #searchInput:not(.search-hidden) {
-        width: 80px;
-        max-width: 80px;
+        width: 120px;
+        max-width: 120px;
         padding: 5px 24px 5px 6px;
         border: 1px solid #ccc;
         opacity: 1;
