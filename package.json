@@ -1,0 +1,21 @@
+{
+  "name": "facit-intern-assignment",
+  "version": "1.0.0",
+  "description": "User Dashboard Application",
+  "scripts": {
+    "start": "npx http-server -p 8001 -o -c-1",
+    "predeploy": "echo preparing deploy",
+    "deploy": "gh-pages -d ."
+  },
+  "homepage": "https://your-username.github.io/your-repo",
+  "keywords": [
+    "dashboard",
+    "users",
+    "api"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
+  }
+}
