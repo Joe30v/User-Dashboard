@@ -173,13 +173,8 @@ header h1 {
         text-align: center;
     }
 
-    /* Smaller search input on mobile to avoid crowding */
     #searchInput{
-        margin-top: 12px;
-        width: 140px;
-        max-width: 45vw;
-        padding: 8px 44px 8px 10px; /* keep space for icon */
-        font-size: 15px;
+        margin-top: 15px;
     }
 
     .user-grid{
