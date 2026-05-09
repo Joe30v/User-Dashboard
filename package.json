@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "User Dashboard Application",
   "scripts": {
-    "start": "npx http-server -p 8001 -o -c-1",
+    "start": "npx http-server -p 8000 -o -c-1",
     "predeploy": "echo preparing deploy",
     "deploy": "gh-pages -d ."
   },

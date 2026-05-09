@@ -294,7 +294,7 @@ header h1 {
 .dashboard-container .search-icon {
     position: absolute;
     right: 20px;
-    top: 8px;
+    top: -10px;
     font-size: 24px;
     z-index: 2000;
     display: block !important;
@@ -310,7 +310,7 @@ header h1 {
 @media (max-width: 600px) {
     .dashboard-container .search-icon{
         right: 25px;
-        top: 8px;
+        top: 20px;
     }
     #searchInput{
         padding-right: 56px;
