@@ -66,7 +66,7 @@ A simple User Dashboard that fetches and displays user data from an API with sea
             npm start
             ```
 
-            This runs `npx http-server -p 8001 -o -c-1` (configured in `package.json`) and opens `http://localhost:8001`.
+            This runs `npx http-server -p 8000 -o -c-1` (configured in `package.json`) and opens `http://localhost:8000`.
 
             4.2.4. Alternative: Use any HTTP server
 
