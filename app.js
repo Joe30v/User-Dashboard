@@ -253,25 +253,3 @@ searchIcon.addEventListener('click', () => {
 
 // initialize
 fetchUsers();
-
-// Mobile preview toggle (button added to footer)
-const togglePreviewBtn = document.getElementById('togglePreview');
-const mobilePreview = document.getElementById('mobilePreview');
-const previewFrame = document.getElementById('previewFrame');
-
-if (togglePreviewBtn && mobilePreview && previewFrame) {
-    let previewOpen = false;
-    togglePreviewBtn.addEventListener('click', () => {
-        previewOpen = !previewOpen;
-        if (previewOpen) {
-            mobilePreview.classList.remove('hidden');
-            togglePreviewBtn.textContent = 'Hide mobile preview';
-            // set iframe src to current page to show live preview
-            previewFrame.src = window.location.href;
-        } else {
-            mobilePreview.classList.add('hidden');
-            togglePreviewBtn.textContent = 'Show mobile preview';
-            previewFrame.src = 'about:blank';
-        }
-    });
-}
