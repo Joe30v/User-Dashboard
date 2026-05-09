@@ -174,10 +174,21 @@ header h1 {
 
 @media (max-width: 600px){
 
+    /* Ensure top-nav stays as single row flexbox on mobile */
+    .top-nav{
+        display: flex;
+        flex-wrap: nowrap !important;
+        justify-content: flex-start;
+        gap: 4px;
+        padding: 8px 12px;
+        align-items: center;
+        overflow: hidden;
+    }
+
     /* Keep header and search on a single row on small screens */
     header{
         display: flex;
-        flex: none;
+        flex: 0 0 auto !important;
         width: auto;
         min-width: 0;
         align-items: center;
@@ -185,31 +196,45 @@ header h1 {
         text-align: left;
     }
 
-    /* reduce top-nav padding and prevent wrapping so items stay on one row */
-    .top-nav{
-        justify-content: flex-start;
-        gap: 4px;
-        padding: 10px 12px;
-        flex-wrap: nowrap;
-        align-items: center;
+    /* smaller header and input on mobile */
+    header h1{ 
+        font-size: 15px; 
+        white-space: nowrap; 
+        margin: 0; 
+        flex-shrink: 0;
     }
 
-    /* smaller header and input on mobile */
-    header h1{ font-size: 16px; white-space: nowrap; margin: 0; }
+    /* Keep search inline with the header, disable absolute positioning */
+    .search-container{ 
+        position: static !important; 
+        right: auto; 
+        top: auto; 
+        transform: none !important; 
+        margin: 0 !important;
+        padding: 0;
+        flex: 0 0 auto;
+        display: flex; 
+        align-items: center; 
+        gap: 3px;
+        flex-shrink: 0;
+    }
 
-    /* keep search inline with the header */
-    .search-container{ position: static; right: auto; top: auto; transform: none; margin-left: 0; flex-shrink: 0; display: flex; align-items: center; gap: 4px; }
-
-    .search-icon { font-size: 20px; }
+    .search-icon { 
+        font-size: 18px;
+        flex-shrink: 0;
+        margin: 0;
+    }
 
     #searchInput{
-        margin-top: 0;
-        width: 100px;
-        max-width: 100px;
-        padding: 6px 36px 6px 8px;
-        font-size: 13px;
+        margin: 0 !important;
+        width: 95px !important;
+        max-width: 95px !important;
+        min-width: 95px;
+        padding: 5px 30px 5px 6px !important;
+        font-size: 12px;
         border: 1px solid #ccc;
-        border-radius: 4px;
+        border-radius: 3px;
+        flex-shrink: 0;
     }
 
     .user-grid{
