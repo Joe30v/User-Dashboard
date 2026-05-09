@@ -230,7 +230,7 @@ header h1 {
     #searchInput{
         margin: 0;
         width: 0;
-        max-width: 0;
+        max-width: 100%;
         padding: 0;
         font-size: 12px;
         border: none;
