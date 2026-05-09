@@ -177,28 +177,39 @@ header h1 {
     /* Keep header and search on a single row on small screens */
     header{
         display: flex;
-        flex: 1 1 auto;
+        flex: none;
+        width: auto;
         min-width: 0;
         align-items: center;
+        gap: 0;
         text-align: left;
     }
 
     /* reduce top-nav padding and prevent wrapping so items stay on one row */
     .top-nav{
-        padding: 12px 16px;
+        justify-content: flex-start;
+        gap: 4px;
+        padding: 10px 12px;
         flex-wrap: nowrap;
+        align-items: center;
     }
 
     /* smaller header and input on mobile */
-    header h1{ font-size: 20px; }
+    header h1{ font-size: 16px; white-space: nowrap; margin: 0; }
 
-    /* keep search inline with the header instead of absolutely positioned */
-    .search-container{ position: static; right: auto; top: auto; transform: none; margin-left: 12px; }
+    /* keep search inline with the header */
+    .search-container{ position: static; right: auto; top: auto; transform: none; margin-left: 0; flex-shrink: 0; display: flex; align-items: center; gap: 4px; }
+
+    .search-icon { font-size: 20px; }
 
     #searchInput{
         margin-top: 0;
-        width: 140px;
-        padding: 8px 44px 8px 10px;
+        width: 100px;
+        max-width: 100px;
+        padding: 6px 36px 6px 8px;
+        font-size: 13px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
     }
 
     .user-grid{
