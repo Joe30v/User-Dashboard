@@ -114,10 +114,10 @@ Quick steps (fork → publish):
 5 Project Files
 
 
-├── index.html    - HTML structure
-├── app.js        - JavaScript logic
-├── style.css     - Styling & responsive layout
-└── package.json  - Dependencies
+index.html    - HTML structure
+app.js        - JavaScript logic
+style.css     - Styling & responsive layout
+package.json  - Dependencies
 
 
 6 Quick Test
