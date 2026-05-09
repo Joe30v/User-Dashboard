@@ -177,64 +177,78 @@ header h1 {
     /* Ensure top-nav stays as single row flexbox on mobile */
     .top-nav{
         display: flex;
-        flex-wrap: nowrap !important;
-        justify-content: flex-start;
-        gap: 4px;
-        padding: 8px 12px;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        gap: 0;
+        padding: 10px 12px;
         align-items: center;
-        overflow: hidden;
+        position: relative;
+        height: auto;
+        min-height: 40px;
     }
 
-    /* Keep header and search on a single row on small screens */
+    /* Keep header on the left */
     header{
         display: flex;
-        flex: 0 0 auto !important;
-        width: auto;
+        flex: 1;
         min-width: 0;
         align-items: center;
         gap: 0;
-        text-align: left;
     }
 
-    /* smaller header and input on mobile */
+    /* smaller header on mobile */
     header h1{ 
         font-size: 15px; 
         white-space: nowrap; 
         margin: 0; 
-        flex-shrink: 0;
     }
 
-    /* Keep search inline with the header, disable absolute positioning */
+    /* Position search container on the right, don't let it overflow */
     .search-container{ 
-        position: static !important; 
-        right: auto; 
-        top: auto; 
-        transform: none !important; 
-        margin: 0 !important;
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        margin: 0;
         padding: 0;
-        flex: 0 0 auto;
         display: flex; 
         align-items: center; 
-        gap: 3px;
+        gap: 2px;
         flex-shrink: 0;
+        z-index: 100;
+        white-space: nowrap;
     }
 
     .search-icon { 
         font-size: 18px;
         flex-shrink: 0;
         margin: 0;
+        color: #5a5a5a;
+        cursor: pointer;
     }
 
     #searchInput{
-        margin: 0 !important;
-        width: 95px !important;
-        max-width: 95px !important;
-        min-width: 95px;
-        padding: 5px 30px 5px 6px !important;
+        margin: 0;
+        width: 0;
+        max-width: 0;
+        padding: 0;
         font-size: 12px;
-        border: 1px solid #ccc;
+        border: none;
         border-radius: 3px;
         flex-shrink: 0;
+        opacity: 0;
+        pointer-events: none;
+    }
+    
+    /* Show input when focused or when not hidden */
+    #searchInput:focus,
+    #searchInput:not(.search-hidden) {
+        width: 80px;
+        max-width: 80px;
+        padding: 5px 24px 5px 6px;
+        border: 1px solid #ccc;
+        opacity: 1;
+        pointer-events: auto;
     }
 
     .user-grid{
