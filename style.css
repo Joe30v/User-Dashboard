@@ -285,3 +285,34 @@ header h1 {
 .hidden {
     display: none !important;
 }
+
+/* Anchor search icon to the top-right of the main dashboard box and keep it visible */
+.dashboard-container {
+    position: relative; /* ensure a positioned ancestor */
+}
+
+.dashboard-container .search-icon {
+    position: absolute;
+    right: 20px;
+    top: 16px;
+    font-size: 24px;
+    z-index: 2000;
+    display: block !important;
+    visibility: visible !important;
+    pointer-events: auto;
+}
+
+/* Reserve padding on the input so icon doesn't overlap */
+#searchInput{
+    padding-right: 56px;
+}
+
+@media (max-width: 600px) {
+    .dashboard-container .search-icon{
+        right: 12px;
+        top: 12px;
+    }
+    #searchInput{
+        padding-right: 56px;
+    }
+}
