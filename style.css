@@ -27,6 +27,7 @@ body {
     flex-direction: column;
     overflow: hidden;
     border: 2px solid #000000;
+    position: relative; /* positioning context for top-right anchored elements */
 }
 
 .top-nav {
@@ -36,7 +37,6 @@ body {
     padding: 20px 40px;
     background-color: #f9f9f9;
     border-bottom: 2px solid #000000;
-    position: relative; /* positioning context for the search icon */
 }
 
 header {
@@ -84,15 +84,14 @@ header h1 {
 }
 
 .search-icon {
-    position: absolute; /* anchor relative to .top-nav */
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
+    position: absolute; /* anchor relative to .dashboard-container */
+    right: 24px;
+    top: 18px;
     font-size: 24px;
     pointer-events: auto;
     color: #5a5a5a;
     cursor: pointer;
-    z-index: 50;
+    z-index: 500;
     transition: color 0.2s ease;
 }
 
@@ -200,7 +199,6 @@ header h1 {
     .search-icon{
         right: 16px;
         top: 12px;
-        transform: none;
     }
 
     .user-grid{
