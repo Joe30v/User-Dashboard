@@ -51,15 +51,14 @@ header h1 {
     color: #333;
 }
 
-/* Search input default sizing (reserves space for icon) */
 #searchInput{
-    width: 220px;
-    max-width: 40vw;
-    padding: 12px 40px 12px 12px; /* right padding reserved for icon */
+    width: 100%;
+    max-width: 300px;
+    padding: 12px 20px 12px 45px;
     border: 1px solid #ccc;
     border-radius: 6px;
     font-size: 16px;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
     opacity: 1;
     display: block;
     text-align: left;
@@ -76,10 +75,7 @@ header h1 {
 }
 
 .search-container {
-    /* Anchor search container to top-right so input + icon stick together */
-    position: absolute;
-    right: 24px;
-    top: 16px;
+    position: relative;
     display: flex;
     align-items: center;
     gap: 10px;
